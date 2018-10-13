@@ -1,0 +1,14 @@
+{
+  "name": "worker",
+  "version": "1.0.0",
+  "description": "Worker for the samplesort-project",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "gregers.boye@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "zeromq": "^5.0.0"
+  }
+}

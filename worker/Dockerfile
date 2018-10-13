@@ -1,4 +1,4 @@
 FROM node:10.4
 WORKDIR /code
-COPY ./frontend/src /code
+COPY ./src /code
 RUN npm install && npm run app
