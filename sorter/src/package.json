@@ -1,15 +1,12 @@
 {
-  "name": "worker",
+  "name": "sorter",
   "version": "1.0.0",
-  "description": "Worker for the samplesort-project",
+  "description": "Sorter/delegator for samplesorter",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "test": "test"
   },
   "author": "gregers.boye@gmail.com",
-  "license": "ISC",
-  "dependencies": {
-    "zeromq": "^5.0.0"
-  }
+  "license": "ISC"
 }
