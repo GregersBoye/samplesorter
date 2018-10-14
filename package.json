@@ -1,0 +1,30 @@
+{
+  "name": "samplesorter",
+  "version": "1.0.0",
+  "description": "samplesorter distributed test",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "chai": "^4.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.7.0",
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "lint": "./node_modules/eslint/bin/eslint.js . -f table; exit 0",
+    "test": "mocha --recursive --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GregersBoye/samplesorter.git"
+  },
+  "author": "gregers.boye@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GregersBoye/samplesorter/issues"
+  },
+  "homepage": "https://github.com/GregersBoye/samplesorter#readme"
+}
