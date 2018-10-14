@@ -12,7 +12,7 @@ This container sorts the list and delegates the sub-lists to the workers.
 This container receives a sub-list and sorts it using quick-sort, then it returns the sorted list to the sorter-container
 
 
-##Setting up project
+## Setting up project
 1: Clone project: 
     
     $ git clone https://github.com/GregersBoye/samplesorter.git
