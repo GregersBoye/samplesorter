@@ -1,0 +1,89 @@
+{
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "rules": {
+        "semi": "error",
+        "no-console": "warn",
+        "no-var":"error",
+		"quote-props": ["error", "as-needed"],
+        "no-unreachable": 2,
+        "dot-notation": 2,
+        "space-in-parens": [2, "never"],
+        "newline-before-return": "error",
+        "padded-blocks": ["error", "never"],
+        "prefer-arrow-callback": "error",
+        "space-before-blocks": 2,
+        "keyword-spacing": 2,
+        "brace-style": [
+            "error",
+            "1tbs"
+        ],
+        "no-multi-spaces": "error",
+        "template-curly-spacing": ["error", "always"],
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "no-trailing-spaces": "error",
+        "no-multiple-empty-lines": [
+            "error",
+            {
+                "max": 1,
+                "maxEOF": 0,
+                "maxBOF": 0
+            }
+        ],
+        "space-infix-ops": "error",
+        "prefer-const":"warn",
+        "prefer-template":"error",
+        "symbol-description":"error",
+        "arrow-parens": [
+            "error",
+            "always"
+        ],
+        "eol-last": [
+            "error",
+            "always"
+        ],
+        "multiline-comment-style": [
+            "error",
+            "starred-block"
+        ],
+        "quotes": [
+            "error",
+            "backtick"
+        ],
+        "require-jsdoc": ["error", {
+            "require": {
+                "FunctionDeclaration": true,
+                "MethodDefinition": true,
+                "ClassDeclaration": false,
+                "ArrowFunctionExpression": false,
+                "FunctionExpression": false
+            }
+        }],
+        "valid-jsdoc":"error",
+        "arrow-spacing":["error", {
+            "before": true,
+            "after": true
+        }]
+    },
+    "globals": {
+        "module": false,
+        "require": false,
+        "console": false,
+        "describe": false,
+        "it": false,
+        "beforeEach": false,
+        "afterEach": false,
+        "before": false,
+        "after": false,
+        "setInterval": false
+    }
+}
