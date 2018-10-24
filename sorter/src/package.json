@@ -8,5 +8,8 @@
     "test": "test"
   },
   "author": "gregers.boye@gmail.com",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^2.1.1"
+  }
 }
