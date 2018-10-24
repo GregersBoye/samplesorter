@@ -10,8 +10,8 @@ class Events {
         };
     }
 
-    static get ZeroMQ(){
-        return {}
+    static get ZeroMQ() {
+        return {};
     }
 }
 

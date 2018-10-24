@@ -6,6 +6,8 @@ class BubbleSort {
      */
     constructor(list) {
         this.list = list;
+        this.iterations = Math.pow(list.length, 2);
+        this.progressPct = 0;
     }
 
     /**
@@ -13,6 +15,8 @@ class BubbleSort {
      * @returns {undefined}
      */
     sort() {
+        let progress = 0;
+
         for (let outer = 0; outer <= this.list.length - 1; outer++) {
             for (let inner = 0; inner <= this.list.length - 1; inner++) {
                 const first = inner;
@@ -21,7 +25,12 @@ class BubbleSort {
                 if (this.list[first] > this.list[second]) {
                     this.swap(first, second);
                 }
+                progress++;
             }
+
+            this.progressPct = (100 * progress / this.iterations).toFixed(5);
+
+            console.log(this.progressPct);
         }
     }
 

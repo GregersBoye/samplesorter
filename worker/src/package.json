@@ -10,6 +10,6 @@
   "author": "gregers.boye@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "zeromq": "^5.0.0"
+    "zeromq": "^5.1.0"
   }
 }
