@@ -1,3 +1,5 @@
+const Log = require(`./../../Utils/Logger`);
+
 class Connection {
     /**
      *
@@ -5,7 +7,7 @@ class Connection {
      */
     constructor(socket) {
         this.socket = socket;
-        console.log(`A client connected`);
+        Log.info(`A client connected`);
     }
 }
 

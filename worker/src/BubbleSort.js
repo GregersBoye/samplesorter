@@ -1,3 +1,5 @@
+const Log = require(`./Utils/Logger`);
+
 class BubbleSort {
     /**
      * Initializes the bubblesort
@@ -30,7 +32,7 @@ class BubbleSort {
 
             this.progressPct = (100 * progress / this.iterations).toFixed(5);
 
-            console.log(this.progressPct);
+            Log.info(this.progressPct);
         }
     }
 

@@ -1,7 +1,7 @@
 const Connection = require(`./../Handlers/Socket/Connection`);
 const Message = require(`./../Handlers/Socket/Message`);
 const Events = require(`./../Enums/Events`);
-
+const Log = require(`./../Utils/Logger`);
 
 class SocketListener {
     /**
@@ -9,9 +9,7 @@ class SocketListener {
      * @param {Number} port
      */
     constructor(io, port) {
-        io.listen(port);
-
-        console.log(`Listening for socket-connections on port ${ port }`);
+        Log.info(`Listening for socket-connections on port ${ port }`);
         io.on(Events.Socket.CONNECTION, (socket) => {
             new Connection(socket);
 
@@ -19,6 +17,8 @@ class SocketListener {
                 new Message(message);
             });
         });
+
+        io.listen(port);
     }
 }
 

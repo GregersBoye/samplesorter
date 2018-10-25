@@ -1,7 +1,8 @@
 const Counter = require(`./Handlers/Counter`);
 
 class Reciever {
-    constructor(connection) {
+    constructor(connection, sender) {
+        this.sender = sender;
         this.connection = connection;
 
         this.connection.on(`message`, (rawMessage) => {

@@ -1,4 +1,4 @@
-const {format, transports, createLogger} = require(`winston`);
+const {format, transports, createLogger, config} = require(`winston`);
 const {printf, combine, timestamp, colorize} = format;
 
 const customFormatter = printf((info) => {
@@ -15,13 +15,15 @@ const customFormatter = printf((info) => {
     return format;
 });
 
-const uppercaseLevel  = printf((info) => {
+const uppercaseLevel = printf((info) => {
     info.level = info.level.toUpperCase();
+
     return info;
 });
 
 const logger = createLogger({
-    level: `info`,
+    levels: config.syslog.levels,
+    level: `debug`,
     format: combine(
         uppercaseLevel,
         timestamp({format: `YYYY-MM-DD HH:mm:ss:SSS`}),

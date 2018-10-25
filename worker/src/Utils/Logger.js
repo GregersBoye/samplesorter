@@ -10,7 +10,7 @@ class Log {
      * Log a message with severity-level debug
      *
      * @param {string} message
-     * @param {*} meta
+     * @param {*} [meta]
      */
     static debug(message, meta) {
         Logger.debug(message, {meta: meta});
@@ -20,7 +20,7 @@ class Log {
      * Log a message with severity-level warning
      *
      * @param {string} message - The message
-     * @param {*} meta
+     * @param {*} [meta]
      */
     static warning(message, meta) {
         Logger.warning(message, {meta: meta});
@@ -30,18 +30,17 @@ class Log {
      * Log a message with severity-level error
      *
      * @param {string} message - The message
-     * @param {*[]} meta
+     * @param {*} [meta]
      */
-    static err(message, meta) {
+    static error(message, meta) {
         Logger.error(message, {meta: meta});
-
     }
 
     /**
      * Log a message with severity-level info
      *
      * @param {string} message
-     * @param {*} meta
+     * @param {*} [meta]
      */
     static info(message, meta) {
         Logger.info(message, {meta: meta});
