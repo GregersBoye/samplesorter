@@ -1,0 +1,11 @@
+---
+version: "3.2"
+
+services:
+  worker_1:
+    volumes:
+      - "./worker/src:/code"
+
+  sorter:
+    volumes:
+      - "./sorter/src:/code"

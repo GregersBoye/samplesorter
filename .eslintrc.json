@@ -68,7 +68,10 @@
                 "FunctionExpression": false
             }
         }],
-        "valid-jsdoc":"error",
+        "valid-jsdoc":["error", {
+            "requireReturn": false,
+            "requireParamDescription": false
+        }],
         "arrow-spacing":["error", {
             "before": true,
             "after": true
@@ -84,6 +87,8 @@
         "afterEach": false,
         "before": false,
         "after": false,
-        "setInterval": false
+        "setInterval": false,
+        "process": false,
+        "require": false
     }
 }

@@ -2,6 +2,7 @@ const Connection = require(`./../Handlers/Socket/Connection`);
 const Message = require(`./../Handlers/Socket/Message`);
 const Events = require(`./../Enums/Events`);
 
+
 class SocketListener {
     /**
      * @param {Socket} io
