@@ -10,8 +10,20 @@ class Events {
         };
     }
 
+    /**
+     *
+     * @return {{incoming: {CONNECTION: string}, outgoing: {}}}
+     * @constructor
+     */
     static get ZeroMQ() {
-        return {};
+        return {
+            incoming: {
+                CONNECTION: `connection`
+            },
+            outgoing: {
+
+            }
+        };
     }
 }
 

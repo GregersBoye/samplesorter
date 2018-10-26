@@ -6,6 +6,14 @@ services:
     volumes:
       - "./worker/src:/code"
 
+  worker_2:
+    volumes:
+      - "./worker/src:/code"
+
+  worker_3:
+    volumes:
+      - "./worker/src:/code"
+
   sorter:
     volumes:
       - "./sorter/src:/code"

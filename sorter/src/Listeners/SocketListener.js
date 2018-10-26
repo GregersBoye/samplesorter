@@ -18,7 +18,6 @@ class SocketListener {
             });
         });
 
-        io.listen(port);
     }
 }
 

@@ -1,4 +1,5 @@
 const name = process.env.NAME;
+const Log = require(`./Utils/Logger`);
 
 class Sender {
     constructor(connection) {
@@ -6,6 +7,7 @@ class Sender {
     }
 
     send(topic, message) {
+        Log.info(`sending message with topic ${ topic }`);
         const dataObject = {
             topic: topic,
             payload: message,

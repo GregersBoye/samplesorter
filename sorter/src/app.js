@@ -2,31 +2,30 @@ const socketPort = process.env.SOCKET_PORT;
 const zmqPort = process.env.ZMQ_PORT;
 const io = require(`socket.io`)();
 const SocketListener = require(`./Listeners/SocketListener`);
+const ZmqListener = require('./Listeners/ZmqListener');
+
 const Log = require(`./Utils/Logger`);
 
 const zmq = require(`zeromq`);
-const requester = zmq.socket(`req`);
+const zmqIo = zmq.socket(`req`);
 const workers = [`worker_1`, `worker_2`, `worker_3`];
 
-Log.debug(`debug`);
-Log.info(`info`);
-Log.error(`error`);
-Log.warning(`warning`);
+Log.info(`Samplesorter sorter version 1.0.0`);
 
 workers.forEach((worker) => {
-    Log.debug(`connecting to ${ worker }`);
-    requester.connect(`tcp://${ worker }:${ zmqPort }`);
-});
+    Log.info(`connecting to ${ worker }`);
+    zmqIo.connect(`tcp://${ worker }:${ zmqPort }`);
 
-for (let i = 0; i <= 100; i++) {
+});
+setTimeout(() => {
+for (let i = 0; i <= 5; i++) {
     const message = JSON.stringify({topic: `counter`, payload: {counter: i}});
     Log.debug(`sending message ${ message }`);
-    requester.send(message);
+    zmqIo.send(message);
 }
-
+}, 500);
 //
-requester.on(`message`, (message) => {
-    Log.debug(message.toString());
-});
 
-new SocketListener(io, socketPort);
+new ZmqListener(zmqIo, {stuff: true});
+
+new SocketListener(zmqIo, socketPort);
